@@ -12,12 +12,12 @@ class CatBloc extends Bloc<CatEvent, CatState> {
 
       try {
         // 2. Ждем данные от сервиса
-        final String imageUrl = await apiService.fetchCatImageUrl();
+        final String imageUrl = await apiService.getCatImage();
         // 3. Если успех — показываем картинку
         emit(CatLoadedState(imageUrl));
       } catch (e) {
         // 4. Если ошибка — показываем ошибку
-        emit(CatErrorState(e.toString()));
+        emit(CatErrorState("Не удалось загрузить котика")); // Ошибка}
       }
     });
   }

@@ -5,7 +5,8 @@ import 'bloc/cat_event.dart';
 import 'bloc/cat_state.dart';
 
 class CatPage extends StatelessWidget {
-  const CatPage({super.key});
+  final CatBloc catBloc;
+  const CatPage({super.key, required this.catBloc});
 
   @override
   Widget build(BuildContext context) {
@@ -13,30 +14,28 @@ class CatPage extends StatelessWidget {
       appBar: AppBar(title: const Text('Cats')),
       body: Center(
         child: BlocBuilder<CatBloc, CatState>(
+          bloc: catBloc,
           builder: (context, state) {
             if (state is CatLoadingState) {
-              return const CircularProgressIndicator(); // крутилку
+              return const CircularProgressIndicator();
             }
             if (state is CatLoadedState) {
               return Padding(
                 padding: const EdgeInsets.all(16.0),
-                child: Image.network(state.imageUrl), // картинку
+                child: Image.network(state.imageUrl),
               );
             }
             if (state is CatErrorState) {
-              return Text('Ошибка: ${state.message}'); // ошибку
+      
+              return Text('Ошибка!');
             }
-            // Это состояние Initial, когда еще ничего не загрузилось
-            return ElevatedButton(
-              onPressed: () => context.read<CatBloc>().add(LoadCatEvent()),
-              child: const Text('Загрузить котика'),
-            );
+            
+            return const SizedBox.shrink();
           },
         ),
       ),
-      // Кнопка обновления кота, вызывает ивент
       floatingActionButton: FloatingActionButton(
-        onPressed: () => context.read<CatBloc>().add(LoadCatEvent()),
+        onPressed: () => catBloc.add(LoadCatEvent()),
         child: const Icon(Icons.refresh),
       ),
     );

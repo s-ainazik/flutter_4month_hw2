@@ -1,10 +1,8 @@
 import 'package:equatable/equatable.dart';
 
 abstract class CatEvent extends Equatable {
-  const CatEvent();
-
   @override
   List<Object> get props => [];
 }
 
-class LoadCatEvent extends CatEvent {} 
+class LoadCatEvent extends CatEvent {}
