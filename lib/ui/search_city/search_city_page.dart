@@ -3,10 +3,10 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hw2/router/app_router.dart';
-import 'package:hw2/weather/search_city/bloc/city_bloc.dart';
-import 'package:hw2/weather/search_city/bloc/city_event.dart';
-import 'package:hw2/weather/search_city/bloc/city_state.dart';
-import 'package:hw2/weather/weather_page.dart';
+import 'package:hw2/ui/search_city/bloc/city_bloc.dart';
+import 'package:hw2/ui/search_city/bloc/city_event.dart';
+import 'package:hw2/ui/search_city/bloc/city_state.dart';
+import 'package:hw2/ui/weather_page.dart';
 import 'package:hw2/weather/weather_params.dart';
 
 @RoutePage()

@@ -11,6 +11,110 @@
 part of 'app_router.dart';
 
 /// generated route for
+/// [CreatePostPage]
+class CreatePostRoute extends PageRouteInfo<CreatePostRouteArgs> {
+  CreatePostRoute({Key? key, List<PageRouteInfo>? children})
+    : super(
+        CreatePostRoute.name,
+        args: CreatePostRouteArgs(key: key),
+        initialChildren: children,
+      );
+
+  static const String name = 'CreatePostRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      final args = data.argsAs<CreatePostRouteArgs>(
+        orElse: () => const CreatePostRouteArgs(),
+      );
+      return CreatePostPage(key: args.key);
+    },
+  );
+}
+
+class CreatePostRouteArgs {
+  const CreatePostRouteArgs({this.key});
+
+  final Key? key;
+
+  @override
+  String toString() {
+    return 'CreatePostRouteArgs{key: $key}';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+    if (other is! CreatePostRouteArgs) return false;
+    return key == other.key;
+  }
+
+  @override
+  int get hashCode => key.hashCode;
+}
+
+/// generated route for
+/// [PostDetailPage]
+class PostDetailRoute extends PageRouteInfo<PostDetailRouteArgs> {
+  PostDetailRoute({Key? key, required int id, List<PageRouteInfo>? children})
+    : super(
+        PostDetailRoute.name,
+        args: PostDetailRouteArgs(key: key, id: id),
+        initialChildren: children,
+      );
+
+  static const String name = 'PostDetailRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      final args = data.argsAs<PostDetailRouteArgs>();
+      return PostDetailPage(key: args.key, id: args.id);
+    },
+  );
+}
+
+class PostDetailRouteArgs {
+  const PostDetailRouteArgs({this.key, required this.id});
+
+  final Key? key;
+
+  final int id;
+
+  @override
+  String toString() {
+    return 'PostDetailRouteArgs{key: $key, id: $id}';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+    if (other is! PostDetailRouteArgs) return false;
+    return key == other.key && id == other.id;
+  }
+
+  @override
+  int get hashCode => key.hashCode ^ id.hashCode;
+}
+
+/// generated route for
+/// [PostsListPage]
+class PostsListRoute extends PageRouteInfo<void> {
+  const PostsListRoute({List<PageRouteInfo>? children})
+    : super(PostsListRoute.name, initialChildren: children);
+
+  static const String name = 'PostsListRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const PostsListPage();
+    },
+  );
+}
+
+/// generated route for
 /// [SearchCityPage]
 class SearchCityRoute extends PageRouteInfo<void> {
   const SearchCityRoute({List<PageRouteInfo>? children})

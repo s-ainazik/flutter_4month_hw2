@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:hw2/weather/country_model.dart';
+import 'package:hw2/models/country_model.dart';
 
 sealed class CityState extends Equatable {
   const CityState();

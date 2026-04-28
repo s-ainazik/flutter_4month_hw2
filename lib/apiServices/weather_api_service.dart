@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
-import 'package:hw2/weather/country_model.dart';
-import 'package:hw2/weather/weather_model.dart';
+import 'package:hw2/models/country_model.dart';
+import 'package:hw2/models/weather_model.dart';
 import 'package:hw2/weather/weather_params.dart';
 import 'package:talker_dio_logger/talker_dio_logger_interceptor.dart';
 

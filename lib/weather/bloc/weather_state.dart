@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:hw2/weather/weather_model.dart';
+import 'package:hw2/models/weather_model.dart';
 
 sealed class WeatherState extends Equatable {
   const WeatherState();

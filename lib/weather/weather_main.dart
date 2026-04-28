@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hw2/router/app_router.dart';
-import 'package:hw2/weather/search_city/settings/settingsBloc/theme_bloc.dart';
-import 'package:hw2/weather/search_city/settings/settingsBloc/theme_state.dart';
+import 'package:hw2/ui/search_city/settings/settingsBloc/theme_bloc.dart';
+import 'package:hw2/ui/search_city/settings/settingsBloc/theme_state.dart';
 import 'package:talker_flutter/talker_flutter.dart';
 
 void main() async {

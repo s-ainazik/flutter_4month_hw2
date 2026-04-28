@@ -1,9 +1,9 @@
 import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hw2/weather/search_city/settings/settingsBloc/theme_bloc.dart';
-import 'package:hw2/weather/search_city/settings/settingsBloc/theme_event.dart';
-import 'package:hw2/weather/search_city/settings/settingsBloc/theme_state.dart';
+import 'package:hw2/ui/search_city/settings/settingsBloc/theme_bloc.dart';
+import 'package:hw2/ui/search_city/settings/settingsBloc/theme_event.dart';
+import 'package:hw2/ui/search_city/settings/settingsBloc/theme_state.dart';
 
 @RoutePage()
 class SettingsPage extends StatelessWidget {
